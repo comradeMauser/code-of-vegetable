@@ -1,3 +1,6 @@
-console.log("some message");
-document.write("some message");
-console.error("Еггог");
+
+console.error("Егор");
+
+
+let message = "Heavy Metal";
+document.write(message);
