@@ -1,6 +1,10 @@
+//============ Training  ============
+//============ (learnJavascript) ============
 
-console.error("Егор");
+//============ Variables 1
+let admin, name;
+name = "john";
+admin = name;
 
-
-let message = "Heavy Metal";
-document.write(message);
+document.write(admin);
+document.write("<br>");
