@@ -12,4 +12,3 @@ function isIsogram(str){
   let res = new Set(word);
   return res.size === word.length
 }
-
