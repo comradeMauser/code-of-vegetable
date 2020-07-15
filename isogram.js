@@ -12,4 +12,3 @@ const isIsogram = (str) => {
 }
 
 //You have passed all of the tests! :)
-
