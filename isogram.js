@@ -8,7 +8,5 @@ Assume the empty string is an isogram. Ignore letter case.
 */
 
 function isIsogram(str){
-  let word = str.toLowerCase();
-  let res = new Set(word);
-  return res.size === word.length
+  return new Set(str.toLowerCase()).size === str.toLowerCase().length
 }
