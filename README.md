@@ -1,2 +1,1 @@
-# training
-Heavy Metal
+the thorny way of knowledge
