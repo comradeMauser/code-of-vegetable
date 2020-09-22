@@ -6,3 +6,10 @@ because it uses the letters A-Z at least once (case is irrelevant).
 Given a string, detect whether or not it is a pangram.
 Return True if it is, False if not. Ignore numbers and punctuation.*/
 
+function isPangram(string) {
+    const array = string.split(' ');
+    const result = array.filter(word => word.length === new Set(word).size)
+    return result.length === array.length
+}
+
+console.log(isPangram(string))
