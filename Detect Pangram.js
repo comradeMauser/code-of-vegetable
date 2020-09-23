@@ -12,5 +12,6 @@ because it uses the letters A-Z at least once (case is irrelevant).
 */
 
 function isPangram(string) {
-    return string.split(' ').filter(word => word.length === new Set(word).size).length === string.split(' ').length
+    const letters = string.toLowerCase().match(/[a-z]/g)
+    return new Set(letters).size === 26
 }
