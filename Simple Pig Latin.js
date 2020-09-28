@@ -10,10 +10,12 @@ Leave punctuation marks untouched.
 'Hello world !' ==> elloHay orldway !
 */
 
-function pigIt(str){
-    return str.trim().match(/[a-z]+/ig)
+function pigIt(str) {
+    const postfix = str.trim().match(/\s\W/ig)
+    const result = str.trim().match(/[a-z]+/ig)
         .map(word => {
             word += word[word.length] = word[0] + "ay"
             return word.slice(1)
         }).join(" ")
+    return postfix ? result + postfix : result
 }
