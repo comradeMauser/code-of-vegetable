@@ -16,6 +16,24 @@ In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC.
 solution(1000); // should return 'M'
 */
 
-function solution(number){
-    // convert the number to a roman numeral
+function solution(number) {
+    if (number <= 3999) {
+        const romanNumerals = [
+            ["M", "MM", "MMM",],
+            ["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+            ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+            ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+        ];
+
+        const arr = number.toString().split("");
+        let result = "";
+        let diff = 4 - arr.length;
+        for (let key in arr) {
+            const letter = romanNumerals[+key + diff][arr[key] - 1]
+            if (letter) {
+                result += letter
+            }
+        }
+        return result
+    }
 }
