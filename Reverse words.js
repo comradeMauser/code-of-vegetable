@@ -1,5 +1,4 @@
-//      Training
-//      www.codewars.com
+// Reverse words
 
 /*  Instructions
 Complete the function that accepts a string parameter, and reverses each word in the string.
@@ -11,17 +10,10 @@ All spaces in the string should be retained.
 */
 
 function reverseWords(str) {
-    const array = []
-    let string = " " + str + " "
-    let subString = " "
-    let index = 0
-    for (let n = 0; n < string.length; n++) {
-        if (string[n] === " ") {
-            subString += (string.slice(index, n))
-            index = n
-            array.push(subString.split('').reverse().join(''))
-            subString = ""
-        }
-    }
-    return array.join('').trim()
+    return str.split(" ").map(el => el.split("").reverse().join("")).join(" ")
 }
+
+// console.log(reverseWords('This is an example!'))
+// console.log(reverseWords('double  spaces'))
+
+// node "Reverse words"
