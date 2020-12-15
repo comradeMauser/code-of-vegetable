@@ -1,5 +1,4 @@
-//      Training
-//      www.codewars.com
+// Square Every Digit
 
 /*  Instructions
 Welcome. In this kata, you are asked to square every digit of a number
@@ -11,9 +10,10 @@ For example, if we run 9119 through the function, 811181 will come out, because 
 */
 
 function squareDigits(number){
-    let result = ""
-    for (let key of number.toString()) {
-        result += parseInt(key ** 2)
-    }
-    return +result
+    return parseInt(number.toString().split("").map(el => Math.pow(+el, 2)).join(""))
 }
+
+// console.log(squareDigits(9119))
+// console.log(squareDigits(4444))
+
+// node "Square Every Digit"
